@@ -1,0 +1,6 @@
+@BMO_Assessment_HostAddress = http://localhost:5065
+
+GET {{BMO_Assessment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

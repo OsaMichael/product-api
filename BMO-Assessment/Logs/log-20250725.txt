@@ -1,0 +1,876 @@
+2025-07-25 17:56:27.058 -04:00 [INF] Starting Product API...
+2025-07-25 17:56:27.234 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 17:56:27.314 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 17:56:27.315 -04:00 [INF] Hosting environment: Development
+2025-07-25 17:56:27.315 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 17:56:27.636 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 17:56:27.602 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 377.4357ms
+2025-07-25 17:56:27.657 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 17:56:27.666 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 8.8149ms
+2025-07-25 17:56:27.730 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.6007ms
+2025-07-25 17:56:27.815 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 17:56:27.836 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.3959ms
+2025-07-25 17:56:38.094 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/1 - null null
+2025-07-25 17:56:38.107 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment)'
+2025-07-25 17:56:38.132 -04:00 [INF] Route matched with {action = "GetById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 17:56:44.384 -04:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2025-07-25 17:57:02.101 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.ProductResponse'.
+2025-07-25 17:57:02.120 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment) in 23983.9915ms
+2025-07-25 17:57:02.120 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment)'
+2025-07-25 17:57:02.130 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/1 - 200 null application/json; charset=utf-8 24035.4885ms
+2025-07-25 18:50:38.181 -04:00 [INF] Starting Product API...
+2025-07-25 18:50:38.371 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 18:50:38.430 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 18:50:38.432 -04:00 [INF] Hosting environment: Development
+2025-07-25 18:50:38.432 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 18:50:38.682 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 18:50:38.671 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 309.5464ms
+2025-07-25 18:50:38.683 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 18:50:38.706 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 22.2583ms
+2025-07-25 18:50:38.754 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.5068ms
+2025-07-25 18:50:38.820 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 18:50:38.842 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.5768ms
+2025-07-25 18:50:56.239 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/1 - null null
+2025-07-25 18:50:56.248 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment)'
+2025-07-25 18:50:56.274 -04:00 [INF] Route matched with {action = "GetById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 18:51:08.120 -04:00 [INF] Executed DbCommand (69ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2025-07-25 18:51:08.215 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.ProductResponse'.
+2025-07-25 18:51:08.247 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment) in 11969.665ms
+2025-07-25 18:51:08.248 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment)'
+2025-07-25 18:51:08.259 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/1 - 200 null application/json; charset=utf-8 12020.1191ms
+2025-07-25 18:52:49.660 -04:00 [INF] Starting Product API...
+2025-07-25 18:52:49.839 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 18:52:49.882 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 18:52:49.884 -04:00 [INF] Hosting environment: Development
+2025-07-25 18:52:49.884 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 18:52:50.120 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 287.2998ms
+2025-07-25 18:52:50.151 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 18:52:50.157 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.8745ms
+2025-07-25 18:52:50.168 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 18:52:50.222 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.9243ms
+2025-07-25 18:52:50.302 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 18:52:50.320 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.1257ms
+2025-07-25 18:54:12.114 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:21855/api/Products/1 - application/json 100
+2025-07-25 18:54:12.131 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Update (BMO-Assessment)'
+2025-07-25 18:54:12.181 -04:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, BMO_Assessment.Models.ProductRequest) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 18:54:13.257 -04:00 [INF] Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2025-07-25 18:54:13.411 -04:00 [INF] Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 21), @p1='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "Description" = @p0, "Price" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-07-25 18:54:13.627 -04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-07-25 18:54:13.632 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.Update (BMO-Assessment) in 1447.414ms
+2025-07-25 18:54:13.632 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.Update (BMO-Assessment)'
+2025-07-25 18:54:13.640 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:21855/api/Products/1 - 500 null text/plain; charset=utf-8 1526.5999ms
+2025-07-25 18:54:31.534 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:21855/api/Products/1 - application/json 100
+2025-07-25 18:54:31.536 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Update (BMO-Assessment)'
+2025-07-25 18:54:31.540 -04:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, BMO_Assessment.Models.ProductRequest) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 18:54:48.671 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2025-07-25 18:56:13.960 -04:00 [INF] Starting Product API...
+2025-07-25 18:56:14.230 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 18:56:14.305 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 18:56:14.308 -04:00 [INF] Hosting environment: Development
+2025-07-25 18:56:14.308 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 18:56:14.588 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 368.2991ms
+2025-07-25 18:56:14.613 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 18:56:14.625 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 18:56:14.629 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 12.573ms
+2025-07-25 18:56:14.717 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.7078ms
+2025-07-25 18:56:14.789 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 18:56:14.805 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.06ms
+2025-07-25 18:56:20.213 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 18:56:20.226 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 18:56:20.257 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 18:56:23.152 -04:00 [INF] Getting all products
+2025-07-25 18:56:23.235 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 2974.2728ms
+2025-07-25 18:56:23.238 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 18:56:23.240 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'logger')
+   at System.ThrowHelper.Throw(String paramName)
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(ILogger logger, String message, Object[] args)
+   at BMO_Assessment.Repository.ProductRepository.GetAll() in C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\Repository\ProductRepository.cs:line 22
+   at BMO_Assessment.Controllers.ProductsController.GetAll() in C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\Controllers\ProductsController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-25 18:56:23.287 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products - 500 null text/plain; charset=utf-8 3073.7895ms
+2025-07-25 19:03:30.332 -04:00 [INF] Starting Product API...
+2025-07-25 19:03:30.549 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 19:03:30.659 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 19:03:30.668 -04:00 [INF] Hosting environment: Development
+2025-07-25 19:03:30.669 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 19:03:30.966 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 427.877ms
+2025-07-25 19:03:30.983 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 19:03:30.992 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 19:03:31.000 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.0347ms
+2025-07-25 19:03:31.042 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.9616ms
+2025-07-25 19:03:31.132 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 19:03:31.176 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.8775ms
+2025-07-25 19:03:39.651 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 19:03:39.673 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:03:39.693 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:04:13.360 -04:00 [INF] Getting all products
+2025-07-25 19:04:26.796 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 47098.0768ms
+2025-07-25 19:04:26.801 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:04:26.811 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'logger')
+   at System.ThrowHelper.Throw(String paramName)
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(ILogger logger, String message, Object[] args)
+   at BMO_Assessment.Repository.ProductRepository.GetAll() in C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\Repository\ProductRepository.cs:line 22
+   at BMO_Assessment.Controllers.ProductsController.GetAll() in C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\Controllers\ProductsController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-25 19:04:26.870 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products - 500 null text/plain; charset=utf-8 47218.3228ms
+2025-07-25 19:05:16.513 -04:00 [INF] Starting Product API...
+2025-07-25 19:05:16.691 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 19:05:16.738 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 19:05:16.739 -04:00 [INF] Hosting environment: Development
+2025-07-25 19:05:16.739 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 19:05:17.147 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 463.8601ms
+2025-07-25 19:05:17.184 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 19:05:17.184 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 19:05:17.190 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 3.9168ms
+2025-07-25 19:05:17.248 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.2738ms
+2025-07-25 19:05:17.314 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 19:05:17.330 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.4411ms
+2025-07-25 19:05:24.173 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 19:05:24.182 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:05:24.205 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:05:32.457 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 8248.5433ms
+2025-07-25 19:05:32.460 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:05:32.470 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'logger')
+   at System.ThrowHelper.Throw(String paramName)
+   at Microsoft.Extensions.Logging.LoggerExtensions.Log(ILogger logger, LogLevel logLevel, EventId eventId, Exception exception, String message, Object[] args)
+   at Microsoft.Extensions.Logging.LoggerExtensions.LogInformation(ILogger logger, String message, Object[] args)
+   at BMO_Assessment.Repository.ProductRepository.GetAll() in C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\Repository\ProductRepository.cs:line 22
+   at BMO_Assessment.Controllers.ProductsController.GetAll() in C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\Controllers\ProductsController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-07-25 19:05:32.517 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products - 500 null text/plain; charset=utf-8 8344.7121ms
+2025-07-25 19:08:21.258 -04:00 [INF] Starting Product API...
+2025-07-25 19:08:21.476 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 19:08:21.572 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 19:08:21.576 -04:00 [INF] Hosting environment: Development
+2025-07-25 19:08:21.576 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 19:08:21.958 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 493.5361ms
+2025-07-25 19:08:21.992 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 19:08:21.999 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 5.7489ms
+2025-07-25 19:08:22.021 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 19:08:22.078 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.1446ms
+2025-07-25 19:08:22.211 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 19:08:22.226 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.5711ms
+2025-07-25 19:08:37.922 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 19:08:37.960 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:08:37.982 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:08:42.154 -04:00 [INF] Getting all products
+2025-07-25 19:08:45.603 -04:00 [INF] Getting all products
+2025-07-25 19:08:47.339 -04:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 19:09:03.101 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 19:09:03.127 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 25140.51ms
+2025-07-25 19:09:03.127 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:09:03.133 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products - 200 null application/json; charset=utf-8 25211.221ms
+2025-07-25 19:10:26.939 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products - application/json 100
+2025-07-25 19:10:26.943 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment)'
+2025-07-25 19:10:26.952 -04:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(BMO_Assessment.Models.ProductRequest) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:10:29.138 -04:00 [INF] Creating a new product: {"Name":"Laptop","Price":10000,"Category":"HP","Description":"Good for office use","$type":"ProductRequest"}
+2025-07-25 19:10:29.144 -04:00 [INF] About to save a new product: {"Id":0,"Name":"Laptop","Price":10000,"Category":"HP","Description":"Good for office use","CreatedDate":"2025-07-25T19:10:29.1438534-04:00","$type":"Product"}
+2025-07-25 19:10:29.291 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 2), @p1='?' (DbType = DateTime), @p2='?' (Size = 19), @p3='?' (Size = 6), @p4='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Category", "CreatedDate", "Description", "Name", "Price")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-07-25 19:10:29.321 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.Response'.
+2025-07-25 19:10:29.326 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment) in 2374.1637ms
+2025-07-25 19:10:29.327 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment)'
+2025-07-25 19:10:29.327 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products - 200 null application/json; charset=utf-8 2391.6279ms
+2025-07-25 19:14:11.698 -04:00 [INF] Starting Product API...
+2025-07-25 19:14:11.960 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 19:14:12.048 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 19:14:12.049 -04:00 [INF] Hosting environment: Development
+2025-07-25 19:14:12.050 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 19:14:12.376 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 427.6573ms
+2025-07-25 19:14:12.418 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 19:14:12.418 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 19:14:12.422 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 3.8001ms
+2025-07-25 19:14:12.483 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.6124ms
+2025-07-25 19:14:12.593 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 19:14:12.618 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.2312ms
+2025-07-25 19:15:07.533 -04:00 [INF] Request starting HTTP/1.1 PUT http://localhost:21855/api/Products/2 - application/json 102
+2025-07-25 19:15:07.547 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Update (BMO-Assessment)'
+2025-07-25 19:15:07.572 -04:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, BMO_Assessment.Models.ProductRequest) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:15:13.610 -04:00 [INF] Executed DbCommand (26ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2025-07-25 19:15:13.857 -04:00 [INF] Executed DbCommand (6ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 21), @p1='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Products" SET "Description" = @p0, "Price" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-07-25 19:15:13.884 -04:00 [INF] updated successfully for product: 2
+2025-07-25 19:15:25.514 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.Response'.
+2025-07-25 19:15:25.533 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.Update (BMO-Assessment) in 17956.2699ms
+2025-07-25 19:15:25.533 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.Update (BMO-Assessment)'
+2025-07-25 19:15:25.545 -04:00 [INF] Request finished HTTP/1.1 PUT http://localhost:21855/api/Products/2 - 200 null application/json; charset=utf-8 18012.1937ms
+2025-07-25 19:19:09.850 -04:00 [INF] Starting Product API...
+2025-07-25 19:19:10.024 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 19:19:10.076 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 19:19:10.078 -04:00 [INF] Hosting environment: Development
+2025-07-25 19:19:10.078 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 19:19:10.384 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 368.7081ms
+2025-07-25 19:19:10.455 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 19:19:10.466 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.0011ms
+2025-07-25 19:19:10.467 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 19:19:10.567 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.6351ms
+2025-07-25 19:19:10.633 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 19:19:10.656 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.4328ms
+2025-07-25 19:19:24.568 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/2 - null null
+2025-07-25 19:19:24.580 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment)'
+2025-07-25 19:19:24.605 -04:00 [INF] Route matched with {action = "GetById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:19:30.719 -04:00 [INF] Executed DbCommand (30ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2025-07-25 19:19:30.824 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.Response'.
+2025-07-25 19:19:30.845 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment) in 6236.7584ms
+2025-07-25 19:19:30.845 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetById (BMO-Assessment)'
+2025-07-25 19:19:30.863 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/2 - 200 null application/json; charset=utf-8 6294.6284ms
+2025-07-25 19:25:06.319 -04:00 [INF] Starting Product API...
+2025-07-25 19:25:06.501 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 19:25:06.550 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 19:25:06.552 -04:00 [INF] Hosting environment: Development
+2025-07-25 19:25:06.552 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 19:25:06.749 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 249.2855ms
+2025-07-25 19:25:06.775 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 19:25:06.782 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.1784ms
+2025-07-25 19:25:06.810 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 19:25:06.862 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.0153ms
+2025-07-25 19:25:07.032 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 19:25:07.069 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.0563ms
+2025-07-25 19:25:28.186 -04:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:21855/api/Products/2 - null null
+2025-07-25 19:25:28.197 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Delete (BMO-Assessment)'
+2025-07-25 19:25:28.222 -04:00 [INF] Route matched with {action = "Delete", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:25:29.453 -04:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+WHERE "p"."Id" = @__p_0
+LIMIT 1
+2025-07-25 19:25:29.514 -04:00 [INF] About delete product with ID : 2
+2025-07-25 19:25:29.624 -04:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Products"
+WHERE "Id" = @p0
+RETURNING 1;
+2025-07-25 19:25:29.645 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.Response'.
+2025-07-25 19:25:29.660 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.Delete (BMO-Assessment) in 1434.0266ms
+2025-07-25 19:25:29.660 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.Delete (BMO-Assessment)'
+2025-07-25 19:25:29.669 -04:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:21855/api/Products/2 - 200 null application/json; charset=utf-8 1483.3472ms
+2025-07-25 19:26:14.370 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 19:26:14.372 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:26:14.382 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 19:26:16.208 -04:00 [INF] Getting all products
+2025-07-25 19:26:17.068 -04:00 [INF] Getting all products
+2025-07-25 19:26:17.108 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 19:26:17.125 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 19:26:17.137 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 2754.2355ms
+2025-07-25 19:26:17.137 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 19:26:17.138 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products - 200 null application/json; charset=utf-8 2767.2916ms
+2025-07-25 22:23:17.843 -04:00 [INF] Starting Product API...
+2025-07-25 22:23:18.040 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 22:23:18.103 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 22:23:18.104 -04:00 [INF] Hosting environment: Development
+2025-07-25 22:23:18.104 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 22:23:18.589 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 555.7209ms
+2025-07-25 22:23:18.624 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 22:23:18.628 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 3.5052ms
+2025-07-25 22:23:18.650 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 22:23:18.703 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.0963ms
+2025-07-25 22:23:18.812 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 22:23:18.826 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.7616ms
+2025-07-25 22:25:27.944 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 22:25:27.957 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:25:27.982 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 22:25:31.510 -04:00 [INF] Getting all products
+2025-07-25 22:25:31.874 -04:00 [INF] Getting all products
+2025-07-25 22:25:32.738 -04:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 22:25:32.864 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 22:25:32.957 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 4963.4173ms
+2025-07-25 22:25:32.958 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:25:32.973 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products - 200 null application/json; charset=utf-8 5062.5615ms
+2025-07-25 22:26:06.667 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 22:26:06.672 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:26:06.673 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 22:27:33.667 -04:00 [INF] Starting Product API...
+2025-07-25 22:27:33.957 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 22:27:34.026 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 22:27:34.036 -04:00 [INF] Hosting environment: Development
+2025-07-25 22:27:34.036 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 22:27:34.311 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 362.9921ms
+2025-07-25 22:27:34.354 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 22:27:34.357 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 22:27:34.360 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 5.2741ms
+2025-07-25 22:27:34.412 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.7944ms
+2025-07-25 22:27:34.494 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 22:27:34.519 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.2707ms
+2025-07-25 22:27:40.852 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products - null null
+2025-07-25 22:27:40.866 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:27:40.894 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 22:27:48.659 -04:00 [INF] Getting all products
+2025-07-25 22:27:52.705 -04:00 [INF] Getting all products
+2025-07-25 22:27:53.706 -04:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 22:27:58.521 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 22:28:01.726 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 20827.6471ms
+2025-07-25 22:28:01.726 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:28:01.734 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products - 200 null application/json; charset=utf-8 20882.232ms
+2025-07-25 22:36:16.646 -04:00 [INF] Starting Product API...
+2025-07-25 22:36:16.832 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 22:36:16.911 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 22:36:16.913 -04:00 [INF] Hosting environment: Development
+2025-07-25 22:36:16.913 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 22:36:17.248 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 422.4392ms
+2025-07-25 22:36:17.301 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 22:36:17.310 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 22:36:17.314 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 11.4643ms
+2025-07-25 22:36:17.373 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.5695ms
+2025-07-25 22:36:17.552 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 22:36:17.577 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.8118ms
+2025-07-25 22:36:25.568 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 22:36:25.584 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:36:25.604 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 22:36:29.414 -04:00 [INF] Getting all products
+2025-07-25 22:36:31.376 -04:00 [INF] Getting all products
+2025-07-25 22:36:32.396 -04:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 22:36:37.244 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 22:36:41.645 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 16033.8585ms
+2025-07-25 22:36:41.646 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:36:41.656 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 16088.4064ms
+2025-07-25 22:43:57.481 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 22:43:57.482 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:43:57.483 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 22:44:09.492 -04:00 [INF] Getting all products
+2025-07-25 22:44:12.046 -04:00 [INF] Getting all products
+2025-07-25 22:44:12.434 -04:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 22:44:19.175 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 22:44:21.753 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 24268.6734ms
+2025-07-25 22:44:21.753 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 22:44:21.753 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 24277.2544ms
+2025-07-25 22:59:39.752 -04:00 [INF] Starting Product API...
+2025-07-25 22:59:39.926 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 22:59:39.969 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 22:59:39.970 -04:00 [INF] Hosting environment: Development
+2025-07-25 22:59:39.970 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 22:59:40.165 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 247.0876ms
+2025-07-25 22:59:40.177 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 22:59:40.182 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.7806ms
+2025-07-25 22:59:40.269 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 22:59:40.315 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.6179ms
+2025-07-25 22:59:40.492 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 22:59:40.507 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1731ms
+2025-07-25 23:00:04.583 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:00:04.610 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:00:04.641 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:00:07.695 -04:00 [INF] Getting all products
+2025-07-25 23:00:08.780 -04:00 [INF] Getting all products
+2025-07-25 23:00:09.872 -04:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:00:12.302 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:00:14.076 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 9429.636ms
+2025-07-25 23:00:14.076 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:00:14.084 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 9504.4322ms
+2025-07-25 23:01:35.243 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:01:35.245 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:01:35.268 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:01:37.483 -04:00 [INF] Getting all products
+2025-07-25 23:01:39.046 -04:00 [INF] Getting all products
+2025-07-25 23:01:39.078 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:01:39.089 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:01:39.090 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 3822.0721ms
+2025-07-25 23:01:39.091 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:01:39.091 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 3851.2706ms
+2025-07-25 23:01:52.240 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:01:52.243 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:01:52.244 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:01:55.506 -04:00 [INF] Getting all products
+2025-07-25 23:01:56.991 -04:00 [INF] Getting all products
+2025-07-25 23:01:57.301 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:01:58.825 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:02:00.597 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 8353.6929ms
+2025-07-25 23:02:00.598 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:02:00.598 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 8358.9462ms
+2025-07-25 23:03:26.928 -04:00 [INF] Starting Product API...
+2025-07-25 23:03:27.111 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 23:03:27.163 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 23:03:27.165 -04:00 [INF] Hosting environment: Development
+2025-07-25 23:03:27.165 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 23:03:27.483 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 370.9656ms
+2025-07-25 23:03:27.527 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 23:03:27.536 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 23:03:27.539 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 10.7249ms
+2025-07-25 23:03:27.616 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.4601ms
+2025-07-25 23:03:27.717 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 23:03:27.736 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.9957ms
+2025-07-25 23:03:32.218 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:03:32.249 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:03:32.271 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:03:34.440 -04:00 [INF] Getting all products
+2025-07-25 23:03:36.120 -04:00 [INF] Getting all products
+2025-07-25 23:03:36.948 -04:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:03:37.036 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:03:37.052 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 4774.9865ms
+2025-07-25 23:03:37.052 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:03:37.059 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 4851.6971ms
+2025-07-25 23:06:57.197 -04:00 [INF] Starting Product API...
+2025-07-25 23:06:57.376 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 23:06:57.459 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 23:06:57.478 -04:00 [INF] Hosting environment: Development
+2025-07-25 23:06:57.478 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 23:06:57.765 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 396.8731ms
+2025-07-25 23:06:57.782 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 23:06:57.788 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 23:06:57.806 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.5473ms
+2025-07-25 23:06:57.851 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.6869ms
+2025-07-25 23:06:57.928 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 23:06:57.943 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.9251ms
+2025-07-25 23:07:08.713 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:07:08.724 -04:00 [INF] No CORS policy found for the specified request.
+2025-07-25 23:07:08.729 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:07:08.754 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:07:11.090 -04:00 [INF] Getting all products
+2025-07-25 23:07:12.905 -04:00 [INF] Getting all products
+2025-07-25 23:07:13.710 -04:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:07:13.798 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:07:13.811 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 5052.3801ms
+2025-07-25 23:07:13.811 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:07:13.816 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 5105.8308ms
+2025-07-25 23:12:21.038 -04:00 [INF] Starting Product API...
+2025-07-25 23:12:21.230 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 23:12:21.309 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 23:12:21.311 -04:00 [INF] Hosting environment: Development
+2025-07-25 23:12:21.311 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 23:12:21.671 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 23:12:21.672 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 23:12:21.670 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 443.3923ms
+2025-07-25 23:12:21.678 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 4.3253ms
+2025-07-25 23:12:21.754 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.1769ms
+2025-07-25 23:12:21.822 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 23:12:21.843 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.3606ms
+2025-07-25 23:12:29.429 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:12:29.454 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:12:29.469 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:12:29.509 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:12:32.448 -04:00 [INF] Getting all products
+2025-07-25 23:12:34.141 -04:00 [INF] Getting all products
+2025-07-25 23:12:35.138 -04:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:12:37.985 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:12:39.734 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 10221.6939ms
+2025-07-25 23:12:39.735 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:12:39.743 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 10314.241ms
+2025-07-25 23:16:08.062 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products - application/json 106
+2025-07-25 23:16:08.067 -04:00 [INF] CORS policy execution failed.
+2025-07-25 23:16:08.072 -04:00 [INF] Request origin http://localhost:21855 does not have permission to access the resource.
+2025-07-25 23:16:08.073 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment)'
+2025-07-25 23:16:08.082 -04:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(BMO_Assessment.Models.ProductRequest) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:16:10.248 -04:00 [INF] Creating a new product: {"ProductName":"Laptop","Price":30000,"Category":"HP","Description":"Good office system","$type":"ProductRequest"}
+2025-07-25 23:16:10.255 -04:00 [INF] About to save a new product: {"Id":0,"Name":"Laptop","Price":30000,"Category":"HP","Description":"Good office system","CreatedDate":"2025-07-25T23:16:10.2546331-04:00","$type":"Product"}
+2025-07-25 23:16:10.400 -04:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 2), @p1='?' (DbType = DateTime), @p2='?' (Size = 18), @p3='?' (Size = 6), @p4='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Category", "CreatedDate", "Description", "Name", "Price")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-07-25 23:16:10.436 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.Response'.
+2025-07-25 23:16:10.445 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment) in 2361.8809ms
+2025-07-25 23:16:10.445 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment)'
+2025-07-25 23:16:10.446 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products - 200 null application/json; charset=utf-8 2386.8103ms
+2025-07-25 23:16:22.239 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:16:22.240 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:16:22.241 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:16:24.988 -04:00 [INF] Getting all products
+2025-07-25 23:16:28.840 -04:00 [INF] Getting all products
+2025-07-25 23:16:28.909 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:16:28.911 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:16:28.912 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 6670.6908ms
+2025-07-25 23:16:28.912 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:16:28.912 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 6673.5837ms
+2025-07-25 23:16:44.464 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:16:44.466 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:16:44.467 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:16:44.468 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:16:46.148 -04:00 [INF] Getting all products
+2025-07-25 23:16:46.148 -04:00 [INF] Getting all products
+2025-07-25 23:16:46.151 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:16:46.153 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:16:46.155 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 1687.2358ms
+2025-07-25 23:16:46.156 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:16:46.156 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 1692.5643ms
+2025-07-25 23:19:28.446 -04:00 [INF] Starting Product API...
+2025-07-25 23:19:28.664 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 23:19:28.725 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 23:19:28.727 -04:00 [INF] Hosting environment: Development
+2025-07-25 23:19:28.727 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 23:19:29.111 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 23:19:29.127 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 15.0627ms
+2025-07-25 23:19:29.125 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 455.8786ms
+2025-07-25 23:19:29.131 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 23:19:29.285 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 153.5433ms
+2025-07-25 23:19:29.350 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 23:19:29.374 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.2151ms
+2025-07-25 23:19:36.138 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:19:36.154 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:19:36.164 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:19:36.203 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:19:42.306 -04:00 [INF] Getting all products
+2025-07-25 23:19:42.307 -04:00 [INF] Getting all products
+2025-07-25 23:19:43.069 -04:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:19:43.167 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:19:43.183 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 6974.1655ms
+2025-07-25 23:19:43.184 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:19:43.190 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 7053.1662ms
+2025-07-25 23:24:43.133 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:24:43.137 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:24:43.139 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:24:43.140 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:24:45.987 -04:00 [INF] Getting all products
+2025-07-25 23:24:45.987 -04:00 [INF] Getting all products
+2025-07-25 23:24:46.032 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:24:46.034 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:24:46.035 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 2895.0106ms
+2025-07-25 23:24:46.036 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:24:46.036 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 2903.7396ms
+2025-07-25 23:25:31.006 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:25:31.015 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:25:31.015 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:25:31.016 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:25:32.755 -04:00 [INF] Getting all products
+2025-07-25 23:25:32.755 -04:00 [INF] Getting all products
+2025-07-25 23:25:32.818 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:25:32.819 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:25:32.820 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 1803.848ms
+2025-07-25 23:25:32.820 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:25:32.820 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 1814.397ms
+2025-07-25 23:26:33.050 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:26:33.053 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:26:33.053 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:26:33.053 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:26:34.924 -04:00 [INF] Getting all products
+2025-07-25 23:26:34.924 -04:00 [INF] Getting all products
+2025-07-25 23:26:34.927 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:26:34.929 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:26:34.934 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 1880.1169ms
+2025-07-25 23:26:34.934 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:26:34.937 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 1887.6641ms
+2025-07-25 23:28:08.906 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:28:08.936 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:28:08.936 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:28:08.936 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:28:10.688 -04:00 [INF] Getting all products
+2025-07-25 23:28:10.688 -04:00 [INF] Getting all products
+2025-07-25 23:28:10.691 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:28:10.693 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:28:10.697 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 1760.2988ms
+2025-07-25 23:28:10.697 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:28:10.697 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 1797.7959ms
+2025-07-25 23:30:29.973 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:30:29.975 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:30:29.976 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:30:29.981 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:30:31.582 -04:00 [INF] Getting all products
+2025-07-25 23:30:31.582 -04:00 [INF] Getting all products
+2025-07-25 23:30:31.585 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:30:31.586 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:30:31.592 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 1610.1532ms
+2025-07-25 23:30:31.592 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:30:31.592 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 1621.2699ms
+2025-07-25 23:32:25.210 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products - application/json 94
+2025-07-25 23:32:25.224 -04:00 [INF] CORS policy execution failed.
+2025-07-25 23:32:25.225 -04:00 [INF] Request origin http://localhost:21855 does not have permission to access the resource.
+2025-07-25 23:32:25.225 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment)'
+2025-07-25 23:32:25.237 -04:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(BMO_Assessment.Models.ProductRequest) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:32:40.595 -04:00 [INF] Starting Product API...
+2025-07-25 23:32:40.780 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 23:32:40.841 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 23:32:40.842 -04:00 [INF] Hosting environment: Development
+2025-07-25 23:32:40.842 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 23:32:41.083 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 311.8911ms
+2025-07-25 23:32:41.120 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 23:32:41.127 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 23:32:41.136 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 7.2687ms
+2025-07-25 23:32:41.199 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.1291ms
+2025-07-25 23:32:41.282 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 23:32:41.306 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.2236ms
+2025-07-25 23:33:40.950 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products - application/json 108
+2025-07-25 23:33:40.964 -04:00 [INF] CORS policy execution failed.
+2025-07-25 23:33:40.968 -04:00 [INF] Request origin http://localhost:21855 does not have permission to access the resource.
+2025-07-25 23:33:40.978 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment)'
+2025-07-25 23:33:41.012 -04:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(BMO_Assessment.Models.ProductRequest) on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:33:43.782 -04:00 [INF] Creating a new product: {"ProductName":"IPhone","Price":40000,"Category":"OPPO","Description":"Good phone for you","$type":"ProductRequest"}
+2025-07-25 23:33:43.792 -04:00 [INF] About to save a new product: {"Id":0,"Name":"IPhone","Price":40000,"Category":"OPPO","Description":"Good phone for you","CreatedDate":"2025-07-25T23:33:43.7911952-04:00","$type":"Product"}
+2025-07-25 23:33:44.579 -04:00 [INF] Executed DbCommand (35ms) [Parameters=[@p0='?' (Size = 4), @p1='?' (DbType = DateTime), @p2='?' (Size = 18), @p3='?' (Size = 6), @p4='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Products" ("Category", "CreatedDate", "Description", "Name", "Price")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2025-07-25 23:33:44.617 -04:00 [INF] Executing OkObjectResult, writing value of type 'BMO_Assessment.Models.Response'.
+2025-07-25 23:33:44.633 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment) in 3618.1428ms
+2025-07-25 23:33:44.634 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.Create (BMO-Assessment)'
+2025-07-25 23:33:44.640 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products - 200 null application/json; charset=utf-8 3690.4705ms
+2025-07-25 23:36:22.169 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:36:22.228 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:36:22.234 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 65.5013ms
+2025-07-25 23:36:22.240 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 81
+2025-07-25 23:36:22.240 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:36:22.241 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:36:22.241 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:36:22.242 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 2.8876ms
+2025-07-25 23:36:37.798 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:36:37.798 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:36:37.818 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:36:37.856 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:36:41.028 -04:00 [INF] Getting all products
+2025-07-25 23:36:41.031 -04:00 [INF] Getting all products
+2025-07-25 23:36:41.318 -04:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:36:41.345 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:36:41.347 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 3491.2884ms
+2025-07-25 23:36:41.347 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:36:41.349 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 3552.0359ms
+2025-07-25 23:39:06.472 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:39:06.473 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:39:06.474 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 6.4477ms
+2025-07-25 23:39:06.479 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 81
+2025-07-25 23:39:06.479 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:39:06.479 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:39:06.479 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:39:06.480 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 1.9256ms
+2025-07-25 23:39:13.634 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:39:13.636 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:39:13.641 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 7.3296ms
+2025-07-25 23:39:13.644 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 81
+2025-07-25 23:39:13.644 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:39:13.645 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:39:13.645 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:39:13.649 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 3.0955ms
+2025-07-25 23:40:42.192 -04:00 [INF] Starting Product API...
+2025-07-25 23:40:42.372 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/index.html - null null
+2025-07-25 23:40:42.444 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-25 23:40:42.445 -04:00 [INF] Hosting environment: Development
+2025-07-25 23:40:42.445 -04:00 [INF] Content root path: C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment
+2025-07-25 23:40:42.662 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/index.html - 200 null text/html;charset=utf-8 298.2138ms
+2025-07-25 23:40:42.720 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-25 23:40:42.727 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 6.023ms
+2025-07-25 23:40:42.750 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/_vs/browserLink - null null
+2025-07-25 23:40:42.800 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.8603ms
+2025-07-25 23:40:42.895 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - null null
+2025-07-25 23:40:42.908 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.7081ms
+2025-07-25 23:40:58.953 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:40:58.967 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:40:58.969 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 15.7729ms
+2025-07-25 23:40:58.971 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 81
+2025-07-25 23:40:58.972 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:40:58.978 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:40:58.979 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:40:58.981 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 10.6823ms
+2025-07-25 23:41:15.745 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:41:15.771 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:41:15.778 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:41:15.830 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:41:42.560 -04:00 [INF] Getting all products
+2025-07-25 23:41:42.568 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:41:42.591 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:41:42.591 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 24.0706ms
+2025-07-25 23:41:42.591 -04:00 [INF] Getting all products
+2025-07-25 23:41:42.596 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 74
+2025-07-25 23:41:42.597 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:41:42.597 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:41:42.597 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:41:42.598 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 1.7219ms
+2025-07-25 23:41:43.321 -04:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:41:43.405 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:41:43.418 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 27583.8653ms
+2025-07-25 23:41:43.418 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:41:43.426 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 27684.3487ms
+2025-07-25 23:41:48.832 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:41:48.848 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:41:48.850 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 17.9265ms
+2025-07-25 23:41:48.854 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 74
+2025-07-25 23:41:48.855 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:41:48.855 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:41:48.856 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:41:48.858 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 3.7623ms
+2025-07-25 23:43:44.871 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:43:44.871 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:43:44.873 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 1.9046ms
+2025-07-25 23:43:44.881 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 74
+2025-07-25 23:43:44.881 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:43:44.881 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:43:44.882 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:43:44.884 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 2.6575ms
+2025-07-25 23:46:06.720 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:46:06.721 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:46:06.722 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:46:06.727 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:46:08.572 -04:00 [INF] Getting all products
+2025-07-25 23:46:08.576 -04:00 [INF] Getting all products
+2025-07-25 23:46:08.618 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:46:08.621 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:46:08.622 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 1894.4995ms
+2025-07-25 23:46:08.622 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:46:08.623 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 1902.5728ms
+2025-07-25 23:46:24.851 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:46:24.851 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:46:24.854 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 3.9274ms
+2025-07-25 23:46:24.856 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 75
+2025-07-25 23:46:24.857 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:46:24.857 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:46:24.858 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:46:24.863 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 6.4186ms
+2025-07-25 23:54:18.815 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:54:18.816 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:54:18.818 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:54:18.818 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:54:20.585 -04:00 [INF] Getting all products
+2025-07-25 23:54:20.586 -04:00 [INF] Getting all products
+2025-07-25 23:54:20.671 -04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:54:20.679 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:54:20.679 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 1860.9006ms
+2025-07-25 23:54:20.679 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:54:20.680 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 1864.722ms
+2025-07-25 23:54:35.067 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:54:35.067 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:54:35.069 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 1.7679ms
+2025-07-25 23:54:35.070 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 71
+2025-07-25 23:54:35.071 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:54:35.071 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:54:35.071 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:54:35.073 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 2.2033ms
+2025-07-25 23:58:39.334 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:58:39.335 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:58:39.336 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 2.7542ms
+2025-07-25 23:58:39.342 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 71
+2025-07-25 23:58:39.344 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:58:39.344 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:58:39.344 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:58:39.345 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 3.5779ms
+2025-07-25 23:58:44.074 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:21855/api/Products/products - null null
+2025-07-25 23:58:44.080 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:58:44.080 -04:00 [INF] Executing endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:58:44.081 -04:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller BMO_Assessment.Controllers.ProductsController (BMO-Assessment).
+2025-07-25 23:58:51.205 -04:00 [INF] Getting all products
+2025-07-25 23:58:51.205 -04:00 [INF] Getting all products
+2025-07-25 23:58:51.208 -04:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Category", "p"."CreatedDate", "p"."Description", "p"."Name", "p"."Price"
+FROM "Products" AS "p"
+2025-07-25 23:58:51.214 -04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BMO_Assessment.Models.ProductResponse, BMO-Assessment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-25 23:58:51.215 -04:00 [INF] Executed action BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment) in 7133.9201ms
+2025-07-25 23:58:51.215 -04:00 [INF] Executed endpoint 'BMO_Assessment.Controllers.ProductsController.GetAll (BMO-Assessment)'
+2025-07-25 23:58:51.215 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:21855/api/Products/products - 200 null application/json; charset=utf-8 7141.6895ms
+2025-07-25 23:59:07.423 -04:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - null null
+2025-07-25 23:59:07.423 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:59:07.425 -04:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:21855/api/Products/products - 204 null null 2.8117ms
+2025-07-25 23:59:07.429 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:21855/api/Products/products - application/json 71
+2025-07-25 23:59:07.430 -04:00 [INF] CORS policy execution successful.
+2025-07-25 23:59:07.431 -04:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:59:07.431 -04:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-07-25 23:59:07.438 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:21855/api/Products/products - 405 null null 8.6654ms
