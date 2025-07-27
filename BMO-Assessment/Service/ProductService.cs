@@ -2,6 +2,8 @@
 using BMO_Assessment.Data;
 using BMO_Assessment.Models;
 using BMO_Assessment.Repository;
+using FluentValidation;
+using FluentValidation.Results;
 using Microsoft.EntityFrameworkCore;
 
 namespace BMO_Assessment.Service
@@ -11,11 +13,13 @@ namespace BMO_Assessment.Service
         private readonly IProductRepository _productRepo;
         private readonly IMapper _mapper;
         private readonly ILogger<ProductService> _logger;
-        public ProductService(IProductRepository productRepo, IMapper mapper, ILogger<ProductService> logger)
+        private readonly IValidator<ProductRequest> _validator;
+        public ProductService(IProductRepository productRepo, IMapper mapper, ILogger<ProductService> logger, IValidator<ProductRequest> validator)
         {
             _productRepo = productRepo;
             _mapper = mapper;
             _logger = logger;
+            _validator = validator;
         }
 
         public async Task<IEnumerable<ProductResponse>> GetAllProducts()
@@ -37,6 +41,15 @@ namespace BMO_Assessment.Service
         public async Task<Response> AddProduct(ProductRequest model)
         {
             if (model == null) throw new ArgumentNullException(nameof(model));
+
+            // 
+            ValidationResult validationResult = await _validator.ValidateAsync(model);
+            if (!validationResult.IsValid)
+            {
+                var errors = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
+                throw new ValidationException("Validation failed: " + errors);
+            }
+
             var product = new Product
             {
                 Category = model.Category,
@@ -83,6 +96,9 @@ namespace BMO_Assessment.Service
 
           
         }
+
+
+
         public async Task<Response> Delete(int id)
         {
             bool deleted = await _productRepo.Delete(id);

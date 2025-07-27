@@ -2,6 +2,9 @@ using BMO_Assessment.AutoMapper;
 using BMO_Assessment.Data;
 using BMO_Assessment.Repository;
 using BMO_Assessment.Service;
+using BMO_Assessment.Validator;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -21,8 +24,11 @@ builder.Host.UseSerilog();
 builder.Services.AddDbContext<ProductContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-    
 builder.Services.AddControllers();
+
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<ProductRequestValidator>();
+
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
@@ -56,18 +62,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-try
-{
-    Log.Information("Starting Product API...");
-    app.Run();
-}
-catch (Exception ex)
-{
-    Log.Fatal(ex, "Application startup failed.");
-}
-finally
-{
-    Log.CloseAndFlush();
-}
-
-//app.Run();
+app.Run();
