@@ -25,6 +25,10 @@ namespace BMO_Assessment.Repository
             _config = config;
         }
 
+        // i used entity framework to enable me run migration and test with raw data.
+        // i use entity framework sqlite to enable me have my data within the project.
+        // if i dont want to test with raw data, then using dapper could have been best 
+        // option for me. then i could use query or store-proceedures.
         public async Task<IEnumerable<Product?>> GetAllProducts()
         {
             _logger.LogInformation("Getting all products");
