@@ -1,9 +1,13 @@
 ﻿using AutoMapper;
 using BMO_Assessment.Controllers;
 using BMO_Assessment.Data;
+using BMO_Assessment.DBConfiguration;
 using BMO_Assessment.Models;
 using Dapper;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Oracle.ManagedDataAccess.Client;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
@@ -16,24 +20,42 @@ namespace BMO_Assessment.Repository
         private readonly IMapper _mapper;
         private readonly ILogger<ProductRepository> _logger;
         private readonly IConfiguration _config;
+        private readonly OracleDbService _oracleDbService;
+        private readonly SqlQueries _sql;
         public ProductRepository(ProductContext context, IMapper mapper,
-            ILogger<ProductRepository> logger, IConfiguration config)
+            ILogger<ProductRepository> logger, IConfiguration config, OracleDbService dbService, IOptions<SqlQueries> sqlOptions)
         {
             _context = context;
             _mapper = mapper;
             _logger = logger;
             _config = config;
+            _oracleDbService = dbService;
+            _sql = sqlOptions.Value;    
         }
 
-        // i used entity framework to enable me run migration and test with raw data.
-        // i use entity framework sqlite to enable me have my data within the project.
-        // if i dont want to test with raw data, then using dapper could have been best 
-        // option for me. then i could use query or store-proceedures.
+        // NOTE: I used Dapper, Oracle database, also used entity framwork to enable me test with raw data, because of the in-built 
+       // sqlite on it, thereby running migration to update my table.
+       // the project has test data when you run code.
+        public async Task<IEnumerable<Product>> GetAllProducts2()
+        {
+            using var connection = _oracleDbService.CreateConnection();
+            connection.Open();
+            return await connection.QueryAsync<Product>(_sql.GetAllProducts);
+        }
+
         public async Task<IEnumerable<Product?>> GetAllProducts()
         {
             _logger.LogInformation("Getting all products");
-            var productResponses = await _context.Products.ToListAsync();       
+            var productResponses = await _context.Products.ToListAsync();
             return productResponses;
+        }
+
+        public async Task<Product?> GetById2(int id)
+        {
+            using var connection = _oracleDbService.CreateConnection();
+            connection.Open();
+            var product = await connection.QueryFirstOrDefaultAsync<Product>(_sql.GetById, new { Id = id });
+            return product;
         }
 
         public async Task<Product?> GetById(int id)
@@ -41,6 +63,15 @@ namespace BMO_Assessment.Repository
             var productResponse = await _context.Products.FindAsync(id);
             return productResponse;
         }
+
+        public async Task<Product> Create2(Product product)
+        {
+            using var connection = _oracleDbService.CreateConnection();
+             connection.Open();
+            await connection.ExecuteAsync(_sql.AddProduct, product);
+            return product;
+        }
+
 
         public async Task<Product> Create(Product product)
         {
@@ -65,17 +96,12 @@ namespace BMO_Assessment.Repository
             return existing;
         }
 
-        // I want to also implement to update a product using dapper
-        public async Task<bool> UpdateProduct(Product product)
+        public async Task<bool> Update2(Product product)
         {
-            using var db = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            var sql = @"UPDATE Products SET 
-                      ProductName = @ProductName,
-                      Price = @Price,
-                      Category = @Category,
-                      Description = @Description
-                    WHERE Id = @Id";
-            var result = await db.ExecuteAsync(sql, product);
+            using var connection = _oracleDbService.CreateConnection();
+            connection.Open();
+
+            var result = await connection.ExecuteAsync(_sql.UpdateProduct, product);
             return result > 0;
         }
 
@@ -90,6 +116,21 @@ namespace BMO_Assessment.Repository
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<bool> Delete2(int id)
+        {
+            using var connection = _oracleDbService.CreateConnection();
+            connection.Open();
+
+            var rowsAffected = await connection.ExecuteAsync(_sql.DeleteProduct, new { Id = id });
+
+            if (rowsAffected == 0)
+                throw new KeyNotFoundException($"Product with ID : {id} not found");
+
+            _logger.LogInformation("Product with ID: {ProductId} deleted successfully.", id);
+            return true;
+        }
+
     }
 }
 

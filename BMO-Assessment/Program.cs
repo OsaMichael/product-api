@@ -1,5 +1,6 @@
 using BMO_Assessment.AutoMapper;
 using BMO_Assessment.Data;
+using BMO_Assessment.DBConfiguration;
 using BMO_Assessment.Repository;
 using BMO_Assessment.Service;
 using BMO_Assessment.Validator;
@@ -23,6 +24,11 @@ builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<ProductContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddSingleton<OracleDbService>();
+
+
+builder.Services.Configure<SqlQueries>(
+   builder.Configuration.GetSection("SqlQueries"));
 
 builder.Services.AddControllers();
 
