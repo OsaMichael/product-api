@@ -49,7 +49,7 @@
   },
   {
     "ContainingType": "BMO_Assessment.Controllers.ProductsController",
-    "Method": "GetAll",
+    "Method": "GetProducts",
     "RelativePath": "api/Products/products",
     "HttpMethod": "GET",
     "IsController": true,

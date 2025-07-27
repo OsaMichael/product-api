@@ -6,11 +6,11 @@ namespace BMO_Assessment.Repository
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<ProductResponse>> GetAll();
-        Task<ProductResponse> GetById(int id);
-        Task<Response> Create(ProductRequest model);
-        Task<Response> Update(int id, ProductRequest updatedProduct);
-        Task<Response> Delete(int id);
+        Task<IEnumerable<Product?>> GetAllProducts();
+        Task<Product?> GetById(int id);
+        Task<Product> Create(Product product);
+        Task<Product> Update(int id, ProductRequest product);
+        Task<bool> Delete(int id);
 
     }
 }

@@ -1,6 +1,7 @@
 using BMO_Assessment.AutoMapper;
 using BMO_Assessment.Data;
 using BMO_Assessment.Repository;
+using BMO_Assessment.Service;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -23,6 +24,7 @@ builder.Services.AddDbContext<ProductContext>(options =>
     
 builder.Services.AddControllers();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

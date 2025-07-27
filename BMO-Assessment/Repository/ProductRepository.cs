@@ -18,89 +18,42 @@ namespace BMO_Assessment.Repository
             _logger = logger;
         }
 
-        public async Task<IEnumerable<ProductResponse>> GetAll()
+        public async Task<IEnumerable<Product?>> GetAllProducts()
         {
             _logger.LogInformation("Getting all products");
-            var products = await _context.Products.ToListAsync();
-            var productResponses = _mapper.Map<List<ProductResponse>>(products);
+            var productResponses = await _context.Products.ToListAsync();       
             return productResponses;
         }
-        public async Task<ProductResponse> GetById(int id)
+        public async Task<Product?> GetById(int id)
         {
             var productResponse = await _context.Products.FindAsync(id);
-            if (productResponse == null)
-            {
-                throw new KeyNotFoundException("Product not found.");
-            }
-            var productResponses = _mapper.Map<ProductResponse>(productResponse);
-            return productResponses;
-
+            return productResponse;
         }
 
-        public async Task<Response> Create(ProductRequest model)
+        public async Task<Product> Create(Product product)
         {
-            if (model == null) throw new ArgumentNullException(nameof(model));
-            var product = new Product
-            {
-                  Category = model.Category,
-                  CreatedDate = DateTime.Now,
-                  Description = model.Description,
-                  Name = model.ProductName,
-                  Price = model.Price
-            };
-            try
-            {
-                _logger.LogInformation("About to save a new product: {@Request}", product);
-                _context.Products.Add(product);
-                await _context.SaveChangesAsync();
-
-                return new Response
-                {
-                    Status = true,
-                    message = "Product created successfully",
-                    Data = product
-                };
-       
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("An error occurred: {Message} \nStackTrace: {StackTrace}", ex.Message, ex.StackTrace);
-                throw;
-            }
-
+            _logger.LogInformation("About to save a new product: {@Request}", product);
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+            return product;
+   
         }
 
-        public async Task<Response> Update(int id, ProductRequest updatedProduct)
+        public async Task<Product> Update(int id, ProductRequest product)
         {
-            try
-            {
-                var existing = await _context.Products.FindAsync(id);
-                if (existing == null)
-                    throw new KeyNotFoundException("Product not found.");
+            var existing = await _context.Products.FindAsync(id);
+            if (existing == null) throw new KeyNotFoundException("Product not found."); ;
 
-                existing.Name = updatedProduct.ProductName;
-                existing.Price = updatedProduct.Price;
-                existing.Category = updatedProduct.Category;
-                existing.Description = updatedProduct.Description;
+            existing.Name = product.ProductName;
+            existing.Price = product.Price;
+            existing.Category = product.Category;
+            existing.Description = product.Description;
 
-                await _context.SaveChangesAsync();
-                _logger.LogInformation("updated successfully for product: {@Id}", id);
-                return new Response
-                {
-                    Status = true,
-                    message = $"Product with ID {id} updated successfully.",
-                    Data = existing
-                };
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("An error occurred: {Message} \nStackTrace: {StackTrace}", ex.Message, ex.StackTrace);
-                throw;
-            }
-            
+            await _context.SaveChangesAsync();
+            return existing;
         }
 
-        public async Task<Response> Delete(int id)
+        public async Task<bool> Delete(int id)
         {
             var existing = await _context.Products.FindAsync(id);
             if (existing == null)
@@ -109,13 +62,7 @@ namespace BMO_Assessment.Repository
             _logger.LogInformation($"About delete product with ID : {id}");
             _context.Products.Remove(existing);
             await _context.SaveChangesAsync();
-            return new Response
-            {
-                Status = true,
-                message = $"Product with ID {id} removed successfully.",
-                Data = id
-            };
-
+            return true;
         }
     }
 }
