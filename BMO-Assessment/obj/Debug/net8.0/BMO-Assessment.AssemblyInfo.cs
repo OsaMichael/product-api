@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMO-Assessment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6379aebef3993ed9c28229c8ad202cab215d55c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+244e6142f56efd6bf63031d46d72e3e04aa61f44")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMO-Assessment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMO-Assessment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

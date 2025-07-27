@@ -2,7 +2,11 @@
 using BMO_Assessment.Controllers;
 using BMO_Assessment.Data;
 using BMO_Assessment.Models;
+using Dapper;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
+using System.Data.SqlClient;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace BMO_Assessment.Repository
 {
@@ -11,11 +15,14 @@ namespace BMO_Assessment.Repository
         private readonly ProductContext _context;
         private readonly IMapper _mapper;
         private readonly ILogger<ProductRepository> _logger;
-        public ProductRepository(ProductContext context, IMapper mapper, ILogger<ProductRepository> logger)
+        private readonly IConfiguration _config;
+        public ProductRepository(ProductContext context, IMapper mapper,
+            ILogger<ProductRepository> logger, IConfiguration config)
         {
             _context = context;
             _mapper = mapper;
             _logger = logger;
+            _config = config;
         }
 
         public async Task<IEnumerable<Product?>> GetAllProducts()
@@ -24,6 +31,7 @@ namespace BMO_Assessment.Repository
             var productResponses = await _context.Products.ToListAsync();       
             return productResponses;
         }
+
         public async Task<Product?> GetById(int id)
         {
             var productResponse = await _context.Products.FindAsync(id);
@@ -51,6 +59,20 @@ namespace BMO_Assessment.Repository
 
             await _context.SaveChangesAsync();
             return existing;
+        }
+
+        // I want to also implement to update a product using dapper
+        public async Task<bool> UpdateProduct(Product product)
+        {
+            using var db = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
+            var sql = @"UPDATE Products SET 
+                      ProductName = @ProductName,
+                      Price = @Price,
+                      Category = @Category,
+                      Description = @Description
+                    WHERE Id = @Id";
+            var result = await db.ExecuteAsync(sql, product);
+            return result > 0;
         }
 
         public async Task<bool> Delete(int id)

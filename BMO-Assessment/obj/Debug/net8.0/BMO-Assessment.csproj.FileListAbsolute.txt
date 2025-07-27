@@ -141,3 +141,10 @@ C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessmen
 C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
 C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\obj\Debug\net8.0\BMO-Assessment.sourcelink.json
+C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\Dapper.dll
+C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\Projects\BMO-Assessment\BMO-Assessment\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
